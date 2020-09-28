@@ -1,5 +1,9 @@
 # Vanilla Redux
 
+## Redux 규칙
+
+1. State를 직접 수정하지 않는다.
+
 ## 2020.09.28
 
 `yarn add redux`
