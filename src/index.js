@@ -5,14 +5,15 @@ const add = document.getElementById("add");
 const minus = document.getElementById("minus");
 const number = document.querySelector("span");
 
-number.innerHTML = 0;
+const ADD = "ADD";
+const MINUS = "MINUS";
 
 // reducer는 데이터를 modify!
 const countModifier = (count = 0, action) => {
   switch (action.type) {
-    case "ADD":
+    case ADD:
       return count + 1;
-    case "MINUS":
+    case MINUS:
       return count - 1;
     default:
       return count;
@@ -31,11 +32,11 @@ countStore.subscribe(onChange);
 
 const handleAdd = () => {
   // countModifier에 action으로 {type: "ADD"} 객체가 들어간다
-  countStore.dispatch({ type: "ADD" });
+  countStore.dispatch({ type: ADD });
 };
 
 const handleMinus = () => {
-  countStore.dispatch({ type: "MINUS" });
+  countStore.dispatch({ type: MINUS });
 };
 
 add.addEventListener("click", handleAdd);

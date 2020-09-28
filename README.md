@@ -12,8 +12,6 @@ const add = document.getElementById("add");
 const minus = document.getElementById("minus");
 const number = document.querySelector("span");
 
-number.innerHTML = 0;
-
 // reducer는 데이터를 modify!
 const countModifier = (count = 0, action) => {
   switch (action.type) {
